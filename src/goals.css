@@ -1,9 +1,14 @@
 body{
-    background-color: black;
-   color: white;
+    margin: 0;
+    padding: 0;
+    background-image: url("../assets/F2bg.jpeg");
+    background-size: cover;
+    background-position: center; 
+    height: 100vh;
+    overflow: hidden;
 }
 .one{
-     background-color: white;
+    background-color: white;
     color: black;
     font-size: 40px;
     width: 400px;
