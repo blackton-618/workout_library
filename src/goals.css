@@ -1,0 +1,34 @@
+body{
+    background-color: black;
+   color: white;
+}
+.one{
+     background-color: white;
+    color: black;
+    font-size: 40px;
+    width: 400px;
+}    
+
+.two{
+     background-color: white;
+    color: black;
+    font-size: 40px;
+    width: 400px;
+
+}
+.three{
+     background-color: white;
+    color: black;
+    font-size: 40px;
+}
+.four{
+     background-color: white;
+    color: black;
+    font-size: 40px;
+
+}
+.five{
+    margin-top: 50px;
+   font-size: 30px;
+   background-color: rgb(47, 241, 47);
+}
