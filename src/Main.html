@@ -8,30 +8,31 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    
     <div id="video-container">
         <video autoplay loop muted style="width:100%; height:100%; object-fit:fill;" src="../assets/F1slideShow.mp4" type="video/mp4"></video>
     </div>
     <form id="userDetails">
             <label style="font-size:25px; color:white">Name  :</label>
             <label style="padding-left: 20px;">
-            <input style=" width:250px; font-size: 15px; color:white; background-color: #333; border: 1px solid #4CAF50; padding:5px;" type="text" placeholder="Full name"/>
+                <input id="userName" type="text" placeholder="Full name" style=" width:250px; font-size:15px; color:white; background-color:#333; border:1px solid #4CAF50; padding:5px;"/>
             </label>
             <br><br><br><br><br>
 
             <label style="font-size:25px; color:white">Gender (optional) : </label>
             <br><br><br><br>
-            <label style= "padding-left: 40px; font-size:23px; color:white; accent-color: #4CAF50; cursor: pointer;">
-                <input type="radio" name="gender" value="Male"> Male
+            <label style= "padding-left:40px; font-size:23px; color:white; accent-color:#4CAF50; cursor:pointer;">
+                <input id="maleGender" type="radio" name="gender" value="Male"> Male
             </label>        
-            <label style= "padding-left: 40px;font-size:23px; color:white;  accent-color: #4CAF50; cursor: pointer;">
-                <input type="radio" name="gender" value="Female"> Female
+            <label style= "padding-left:40px; font-size:23px; color:white;  accent-color:#4CAF50; cursor:pointer;">
+                <input id="femaleGender" type="radio" name="gender" value="Female"> Female
             </label>
             <br><br><br><br>
 
             <label style="font-size:25px; color:white">What is your experience ? </label>
             <br><br><br><br>
             <label style="padding-left: 20px;">
-                <select style="width:300px; font-size:20px; color:white; background-color: #333; border: 1px solid #4CAF50; padding: 5px; cursor: pointer;">
+                <select id="userExperience" style="width:300px; font-size:20px; color:white; background-color:#333; border:1px solid #4CAF50; padding:5px; cursor:pointer;">
                     <option value="" disabled selected>Select</option>  
                     <option value="Beginner">Beginner</option>
                     <option value="Intermediate">Intermediate</option>
@@ -44,5 +45,6 @@
                 <button type="button" onclick="location.href='goals.html'" style="background-color: #4CAF50; color: white; width: 100px; padding:10px; border-radius: 4px; cursor: pointer;">NEXT >></button>
             </label>    
     </form>
+    <script src="main.js"></script>
 </body>
 </html>
