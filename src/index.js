@@ -1,17 +1,32 @@
 function validation() {
-    var username = document.getElementById("usernameInput").value.trim()
-    var experience = document.getElementById("experienceSelect").value.trim()
+    let userName = document.getElementById("usernameInput").value.trim();
+    let userGender = document.querySelector('input[name="gender"]:checked');
+    let userExperience = document.getElementById("experienceSelect").value;
 
-    if (username == "") {
-        window.alert("you have to enter your name")
+    if (userName == "") {
+        window.alert("Please enter your name");
         return false;
     }
 
-    if (experience == "") {
-        window.alert("you have select your experience")
+    if (userGender) {
+        userGender = userGender.value;
+    } else {
+        userGender = "Not specified";
+    }
+
+    if (userExperience == "") {
+        window.alert("Please select your experience");
         return false;
     }
 
-    window.location.href = "goals.html"
-    return true
+    console.log("Name:", userName);
+    console.log("Experience:", userExperience);
+    console.log("Gender:", userGender);
+
+    localStorage.setItem("userName", userName);
+    localStorage.setItem("userGender", userGender);
+    localStorage.setItem("userExperience", userExperience);
+
+    window.location.href = "F2.html"
+    return true;
 }
