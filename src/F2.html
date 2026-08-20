@@ -9,29 +9,27 @@
 </head>
 
 <body>
-    <div class="blurCenter">
-        <center>
-        <br><h1 style="text: size adjust 10px; color: #A9A9A9;">Ok <script>document.write(localStorage.getItem("userName"));</script>, Lets get started...</h1>
+    <div class="blurCenter">        
+        <br><h1 style="color: #A9A9A9;">Ok <script>document.write(localStorage.getItem("userName"));</script>, Lets get started...</h1>
         <h1 style="color: #A9A9A9;">So what are you looking forward to achieve?</h1>
         <br><br>
 
         <div class="option-box">
-            <input type="radio" name="workout" style="color: #A9A9A9;" >
+            <input type="radio" value="Muscle Build" name="workout" style="accent-color:black">
             <label  class="one">Muscle Build</label>
             <br><br>
-            <input type="radio" name="workout">
+            <input type="radio" value="Fat Burn" name="workout" style="accent-color:black">
             <label  class="two">Fat Burn</label>
             <br><br>
-            <input type="radio"name="workout" >
-            <label class="three">Abs exerise</label>
+            <input type="radio" value="Abs Exercise" name="workout" style="accent-color:black">
+            <label class="three">Abs Exercise</label>
             <br><br>
-            <input type="radio"name="workout" >
+            <input type="radio" value="Calisthenics" name="workout" style="accent-color:black">
             <label class="four">Calisthenics</label>
         </div>
 
-        <button class="five">NEXT>></button>
+        <button class="five" onclick="return F2validation()">NEXT >></button>
         <script src="index.js"></script>
-        </center>
     </div>
 </body>
 </html>
