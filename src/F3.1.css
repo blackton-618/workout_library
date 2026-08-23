@@ -1,79 +1,71 @@
-body{
-    background-color: black;
+body {
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: #8f3027 2px solid;
+  margin: 10px;
+  width: calc(100vw - 24px);
+  height: calc(100vh - 24px);
+  overflow: hidden;
+  box-sizing: border-box;
 }
-h2{
-   color: white;
-   text-align: center;
-   font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    margin: 12px 0;
-    margin-top: 40px;
+
+h2 {
+  color: white;
+  font-size: 30px;
+  padding-left: 100px;
+  font-weight: 300px;
 }
+
 .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-     gap: 12px;
-    width: min(1100px, calc(100% - 24px));
-     margin: 0 auto 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* balanced columns */
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  padding-top: 24px;
+  width: min(1100px, calc(100% - 24px));
+  margin: 0 auto 16px;
 }
+
 .box {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    aspect-ratio: 1.25 / 1;
-    min-height: 0;
-    border: 2px solid #333;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    font-size: 58px;
-    font-weight: 700;
+  border: 2px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: black;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .box:hover {
-    border-color: #8f3027;
-    box-shadow: 0 0 0 2px #8f3027;
+  border-color: #8f3027;
+  box-shadow: 0 0 0 2px #8f3027;
 }
 
 .box img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    background-color: black;
-    border-radius: 6px;
+  display: block;
+  width: 100%;
+  height: auto; /* keeps natural proportions */
+  border-radius: 8px;
+  object-fit: cover; /* fills neatly without distortion */
 }
-
-
-
 
 @media (max-width: 700px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .box {
-        font-size: 38px;
-    }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.nextbtn{
-    background-color: #8f3027;
-    color: white;
-    border: 2px solid #c46a58;
-    border-radius: 6px;
-    display: block;
-    margin: 0 auto;
-    padding: 8px 24px;
-    font-size: 20px;
-    font-weight: 700;
-    cursor: pointer;
+.nextbtn {
+  background-color: #8f3027;
+  color: white;
+  border: 2px solid #c46a58;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+  padding: 8px 24px;
+  width: 100px;
+  font-weight: 700;
+  cursor: pointer;
 }
-
-
