@@ -33,30 +33,40 @@ function mainvalidation() {
 
 function F2validation() {
     let userGoal = document.querySelector('input[name="workout"]:checked');
-    if (userGoal) {
-        userGoal = userGoal.value;
-    } else {
+   if (!userGoal) {
         window.alert("Please select your workout goal");
         return false;
     }
+    userGoal = userGoal.value;
+    console.log("Workout Goal:", userGoal);
+    localStorage.setItem("userGoal", userGoal);
 
     if (userGoal == "Muscle Build") {
         window.location.href = "F3.1.html";
+        return;
     }
 
     if (userGoal == "Fat Burn") {
        window.location.href = "F3.2.html";
+       return;
     }
 
     if (userGoal == "Abs Exercise") {
         window.location.href = "F3.3.html";
+        return;
     }
 
     if (userGoal == "Calisthenics") {
         window.location.href = "F3.4.html";
+        return;
     }
+}
 
-    console.log("Workout Goal:", userGoal);
-
-    localStorage.setItem("userGoal", userGoal);
+function exerciseSelection() {
+    document.querySelectorAll('.box').forEach(box => {
+        box.addEventListener('click', () => {
+            document.querySelectorAll('.box').forEach(b => b.classList.remove('selected'));
+            box.classList.add('selected');
+        });
+    });
 }

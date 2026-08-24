@@ -20,13 +20,12 @@ h2 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* balanced columns */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  width: min(1100px, calc(100% - 20px));
   justify-content: center;
   align-items: center;
-  gap: 28px;
-  padding-top: 24px;
-  width: min(1100px, calc(100% - 24px));
-  margin: 0 auto 16px;
+  margin: 40px auto;
 }
 
 .box {
@@ -36,6 +35,7 @@ h2 {
   background-color: black;
   cursor: pointer;
   transition: border-color 0.3s, box-shadow 0.3s;
+  height: 280px; /* reduce vertical height */
 }
 
 .box:hover {
@@ -46,9 +46,9 @@ h2 {
 .box img {
   display: block;
   width: 100%;
-  height: auto; /* keeps natural proportions */
+  height: 100%;
+  object-fit: cover; /* keeps proportions neat */
   border-radius: 8px;
-  object-fit: cover; /* fills neatly without distortion */
 }
 
 .box.selected {
@@ -56,21 +56,19 @@ h2 {
   box-shadow: 0 0 0 2px #8f3027;
 }
 
-@media (max-width: 700px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 .nextbtn {
   background-color: #8f3027;
   color: white;
   border: 2px solid #c46a58;
-  border-radius: 4px;
-  display: block;
-  margin: 0 auto;
-  padding: 8px 24px;
+  border-radius: 6px;
+  padding: 10px 28px;
   width: 100px;
   font-weight: 700;
   cursor: pointer;
+  position: absolute;      /* anchor to the bottom */
+  bottom: 60px;            /* distance from bottom edge */
+  left: 50%;               /* center horizontally */
+  transform: translateX(-50%); /* perfect centering */
 }
+
