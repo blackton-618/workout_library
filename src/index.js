@@ -80,6 +80,10 @@ const timers = [
     { seconds: 0, interval: null },
     { seconds: 0, interval: null },
     { seconds: 0, interval: null },
+    { seconds: 0, interval: null },
+    { seconds: 0, interval: null },
+    { seconds: 0, interval: null },
+    { seconds: 0, interval: null },
     { seconds: 0, interval: null }
 ];
 
@@ -160,4 +164,37 @@ function stratstop6() {
 function reset6() {
     resetTimer(5, "display6", "btn6");
 }
+
+function stratstop7() {
+    toggleTimer(6, "display7", "btn7");
+}
+
+function reset7() {
+    resetTimer(6, "display7", "btn7");
+}
+
+function stratstop8() {
+    toggleTimer(7, "display8", "btn8");
+}
+
+function reset8() {
+    resetTimer(7, "display8", "btn8");
+}
+
+function stratstop9() {
+    toggleTimer(8, "display9", "btn9");
+}
+
+function reset9() {
+    resetTimer(8, "display9", "btn9");
+}
+
+function stratstop10() {
+    toggleTimer(9, "display10", "btn10");
+}
+
+function reset10() {
+    resetTimer(9, "display10", "btn10");
+}
+
 
