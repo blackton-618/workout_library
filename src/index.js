@@ -74,127 +74,48 @@ function exerciseSelection() {
     localStorage.setItem("userGoal", userGoal);
 }
 
-const timers = [
-    { seconds: 0, interval: null },
-    { seconds: 0, interval: null },
-    { seconds: 0, interval: null },
-    { seconds: 0, interval: null },
-    { seconds: 0, interval: null },
-    { seconds: 0, interval: null },
-    { seconds: 0, interval: null },
-    { seconds: 0, interval: null },
-    { seconds: 0, interval: null },
-    { seconds: 0, interval: null }
-];
+let timer;
+let running = false;
+let seconds = 0;
+let miniSeconds = 0;
 
-function toggleTimer(index, displayId, buttonId) {
-    const timer = timers[index];
-    const display = document.getElementById(displayId);
-    const button = document.getElementById(buttonId);
+const secDisplay = document.getElementById("seconds");
+const miniDisplay = document.getElementById("miniSeconds");
+const startBtn = document.getElementById("startBtn");
+const resetBtn = document.getElementById("resetBtn");
 
-    if (timer.interval !== null) {
-        clearInterval(timer.interval);
-        timer.interval = null;
-        button.textContent = "Start";
-        return;
-    }
-
-    timer.interval = setInterval(() => {
-        timer.seconds++;
-        const minutes = Math.floor(timer.seconds / 60).toString().padStart(2, "0");
-        const seconds = (timer.seconds % 60).toString().padStart(2, "0");
-        display.textContent = `${minutes}:${seconds}`;
-    }, 1000);
-
-    button.textContent = "Stop";
+function updateDisplay() {
+  secDisplay.textContent = String(seconds).padStart(2, "0");
+  miniDisplay.textContent = String(miniSeconds).padStart(2, "0");
 }
 
-function resetTimer(index, displayId, buttonId) {
-    clearInterval(timers[index].interval);
-    timers[index].seconds = 0;
-    timers[index].interval = null;
-    document.getElementById(displayId).textContent = "00:00";
-    document.getElementById(buttonId).textContent = "Start";
-}
-
-function stratstop() {
-    toggleTimer(0, "display", "btn");
+function startStop() {
+  if (!running) {
+    running = true;
+    startBtn.textContent = "Stop";
+    timer = setInterval(() => {
+      miniSeconds++;
+      if (miniSeconds === 100) {
+        miniSeconds = 0;
+        seconds++;
+      }
+      updateDisplay();
+    }, 10);
+  } else {
+    running = false;
+    startBtn.textContent = "Start";
+    clearInterval(timer);
+  }
 }
 
 function reset() {
-    resetTimer(0, "display", "btn");
+  clearInterval(timer);
+  running = false;
+  seconds = 0;
+  miniSeconds = 0;
+  updateDisplay();
+  startBtn.textContent = "Start";
 }
 
-function stratstop2() {
-    toggleTimer(1, "display2", "btn2");
-}
-
-function reset2() {
-    resetTimer(1, "display2", "btn2");
-}
-
-function stratstop3() {
-    toggleTimer(2, "display3", "btn3");
-}
-
-function reset3() {
-    resetTimer(2, "display3", "btn3");
-}
-
-function stratstop4() {
-    toggleTimer(3, "display4", "btn4");
-}
-
-function reset4() {
-    resetTimer(3, "display4", "btn4");
-}
-
-function stratstop5() {
-    toggleTimer(4, "display5", "btn5");
-}
-
-function reset5() {
-    resetTimer(4, "display5", "btn5");
-}
-
-function stratstop6() {
-    toggleTimer(5, "display6", "btn6");
-}
-
-function reset6() {
-    resetTimer(5, "display6", "btn6");
-}
-
-function stratstop7() {
-    toggleTimer(6, "display7", "btn7");
-}
-
-function reset7() {
-    resetTimer(6, "display7", "btn7");
-}
-
-function stratstop8() {
-    toggleTimer(7, "display8", "btn8");
-}
-
-function reset8() {
-    resetTimer(7, "display8", "btn8");
-}
-
-function stratstop9() {
-    toggleTimer(8, "display9", "btn9");
-}
-
-function reset9() {
-    resetTimer(8, "display9", "btn9");
-}
-
-function stratstop10() {
-    toggleTimer(9, "display10", "btn10");
-}
-
-function reset10() {
-    resetTimer(9, "display10", "btn10");
-}
-
-
+startBtn.addEventListener("click", startStop);
+resetBtn.addEventListener("click", reset);
