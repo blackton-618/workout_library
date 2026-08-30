@@ -10,30 +10,42 @@
 
 <body>
     <header>
-        <h1>Calisthenics</h1>
+        <h1>Calisthenics Workout</h1>
     </header>
-    <div class="container">
-        <div class="right">
-            <img src="../assets/hollow hold.jpg" alt="Hollow body hold">
+    <br><br>
+
+    <h2>Exercises  1/10</h2>
+    <h1 class="workout1">Hollow Body Hold</h1> <br><br>
+    <img class="workout-image" src="../assets/hollow hold.jpg" alt="Hollow Body Hold Exercise">>
+    <h3><span>sets</span><span>:</span><span>3 sets</span></h3>
+    <h3><span>hold time</span><span>:</span><span>20-30 seconds</span></h3>
+    <h3><span>rest time</span><span>:</span><span>40sec</span></h3>
+    <h3><span>Est time</span><span>:</span><span>5-10min</span></h3><br><br>
+    <div class="stopwatch-frame">
+      <div class="dial">
+        <div class="center-display">
+          <span id="seconds">00</span> :
+          <span id="miniSeconds">00</span>
         </div>
-        <div class="left">
-            <h2>Exercises  1/10</h2>
-            <h1 class="workout1">Hollow Body Hold</h1><br><br>
-            <h3><span>sets</span><span>:</span><span>3 sets</span></h3>
-            <h3><span>reps</span><span>:</span><span>10-12 reps</span></h3>
-            <h3><span>rest time</span><span>:</span><span>40sec</span></h3>
-            <h3><span>Est time</span><span>:</span><span>5-10min</span></h3><br><br>
-            <button id="btn" onclick="stratstop()">Start</button>
-            <button id="resetbtn" onclick="reset()">Reset</button>
-            <br><br>
-            <h2 class="inst">Instruction</h2>
-                <ul>
-                    <li>Lie flat on your back on a mat with your legs straight and your arms beside you.</li>
-                    <li>Keep your lower back pressed gently against the floor and tighten your core.</li>
-                    <li>Pause briefly at the top, then slowly lower your legs without letting them drop.</li>
-                    <li>Repeat with controlled movement and avoid swinging your legs or lifting your lower back off the floor.</li>
-                
-                </ul>
-            </div>
-            <br>
-            <hr>
+      </div>
+      <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+    </div>
+    <br><br>
+    <h2 class="inst">Instruction</h2>
+        <ul>
+            <li>Lie flat on your back. Press your lower back firmly into the floor so there’s no gap underneath.</li>
+            <li>Lift your legs, head, and shoulder blades slightly off the ground.</li>
+            <li>Extend your arms overhead. </li>
+            <li>Hold this banana-like shape. </li>
+        </ul>
+    </div>
+    <br><hr>
+    <br><br>
+
+
+        <script src="index.js"></script>
+</body>
+</html>
