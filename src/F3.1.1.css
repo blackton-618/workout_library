@@ -1,0 +1,111 @@
+body{
+    background-color: black;
+}
+.title{
+    color:#8f3027;
+    text-align: center;
+    margin-top: 60px;
+    background-color:  silver;
+   
+
+}
+h2{
+    color: silver;
+   margin-top: 20px;
+   padding-left: 30px;
+    
+}
+.workout1{
+    color: #8f3027;
+    padding-left: 30px;
+
+}
+
+span {
+    font-size: 20px;
+    color: silver;
+    padding-left: 20px;
+
+}
+.stopwatch-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  border: 3px solid #ff8c00;
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.3);
+}
+.dial {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #111 60%, #000);
+}
+.center-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+#seconds, #miniSeconds {
+  min-width: 50px;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#startBtn1, #startBtn2, #startBtn3, #startBtn4, #startBtn5, #resetBtn1, #resetBtn2, #resetBtn3, #resetBtn4, #resetBtn5 {
+  width: 100px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#startBtn1, #startBtn2, #startBtn3, #startBtn4, #startBtn5 {
+  background-color: #00b86b;
+  color: black;
+}
+
+#resetBtn1, #resetBtn2, #resetBtn3, #resetBtn4, #resetBtn5 {
+  background-color: #555;
+  color: white;
+}
+
+#startBtn1:hover, #startBtn2:hover, #startBtn3:hover, #startBtn4:hover, #startBtn5:hover {
+  background-color: #00ff88;
+}
+
+#resetBtn1:hover, #resetBtn2:hover, #resetBtn3:hover, #resetBtn4:hover, #resetBtn5:hover {
+  background-color: #777;
+}
+ul{
+    color: silver;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.inst{
+    color: #8f3027;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}

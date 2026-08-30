@@ -74,48 +74,58 @@ function exerciseSelection() {
     localStorage.setItem("userGoal", userGoal);
 }
 
-let timer;
-let running = false;
-let seconds = 0;
-let miniSeconds = 0;
+// Create stopwatch objects for each workout
+const stopwatches = {};
 
-const secDisplay = document.getElementById("seconds");
-const miniDisplay = document.getElementById("miniSeconds");
-const startBtn = document.getElementById("startBtn");
-const resetBtn = document.getElementById("resetBtn");
-
-function updateDisplay() {
-  secDisplay.textContent = String(seconds).padStart(2, "0");
-  miniDisplay.textContent = String(miniSeconds).padStart(2, "0");
-}
-
-function startStop() {
-  if (!running) {
-    running = true;
-    startBtn.textContent = "Stop";
-    timer = setInterval(() => {
-      miniSeconds++;
-      if (miniSeconds === 100) {
-        miniSeconds = 0;
-        seconds++;
+function createStopwatch(id) {
+  return {
+    timer: null,
+    running: false,
+    seconds: 0,
+    miniSeconds: 0,
+    secDisplay: document.getElementById("seconds" + id),
+    miniDisplay: document.getElementById("miniSeconds" + id),
+    startBtn: document.getElementById("startBtn" + id),
+    resetBtn: document.getElementById("resetBtn" + id),
+    
+    updateDisplay() {
+      this.secDisplay.textContent = String(this.seconds).padStart(2, "0");
+      this.miniDisplay.textContent = String(this.miniSeconds).padStart(2, "0");
+    },
+    
+    startStop() {
+      if (!this.running) {
+        this.running = true;
+        this.startBtn.textContent = "Stop";
+        this.timer = setInterval(() => {
+          this.miniSeconds++;
+          if (this.miniSeconds === 100) {
+            this.miniSeconds = 0;
+            this.seconds++;
+          }
+          this.updateDisplay();
+        }, 10);
+      } else {
+        this.running = false;
+        this.startBtn.textContent = "Start";
+        clearInterval(this.timer);
       }
-      updateDisplay();
-    }, 10);
-  } else {
-    running = false;
-    startBtn.textContent = "Start";
-    clearInterval(timer);
-  }
+    },
+    
+    reset() {
+      clearInterval(this.timer);
+      this.running = false;
+      this.seconds = 0;
+      this.miniSeconds = 0;
+      this.updateDisplay();
+      this.startBtn.textContent = "Start";
+    }
+  };
 }
 
-function reset() {
-  clearInterval(timer);
-  running = false;
-  seconds = 0;
-  miniSeconds = 0;
-  updateDisplay();
-  startBtn.textContent = "Start";
+// Initialize all stopwatches
+for (let i = 1; i <= 5; i++) {
+  stopwatches[i] = createStopwatch(i);
+  stopwatches[i].startBtn.addEventListener("click", () => stopwatches[i].startStop());
+  stopwatches[i].resetBtn.addEventListener("click", () => stopwatches[i].reset());
 }
-
-startBtn.addEventListener("click", startStop);
-resetBtn.addEventListener("click", reset);
