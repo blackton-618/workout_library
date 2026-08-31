@@ -121,3 +121,9 @@ document.querySelectorAll('.stopwatch-frame').forEach(frame => {
   startBtn.addEventListener("click", startStop);
   resetBtn.addEventListener("click", reset);
 });
+// Initialize all stopwatches
+for (let i = 1; i <= 10; i++) {
+  stopwatches[i] = createStopwatch(i);
+  stopwatches[i].startBtn.addEventListener("click", () => stopwatches[i].startStop());
+  stopwatches[i].resetBtn.addEventListener("click", () => stopwatches[i].reset());
+}
