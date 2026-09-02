@@ -1,39 +1,52 @@
-body{
+body {
     background-color: black;
 }
-.title{
-    color:#8f3027;
+header {
     text-align: center;
-    margin-top: 60px;
-    background-color:  silver;
-   
-
+    background-color: silver;
 }
-h2{
-    color: silver;
-   margin-top: 20px;
-   padding-left: 30px;
-    
-}
-.workout1{
+.inst {
     color: #8f3027;
-    padding-left: 30px;
-
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
 }
-
+ul {
+    color: silver;
+    font-size: 30px;
+}
+span {
+    font-size: 20px;
+}
+h1 {
+    text-align: center;
+    margin-top: 80px;
+    color: #8f3027;
+}
+h2 {
+    color: silver;
+    margin-left: 50px;
+}
+.workout1 {
+    color: #8f3027;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0 0 50px;
+    padding: 0;
+    text-align: left;
+}
 .workout-image {
     float: right;
     width: min(45%, 650px);
     height: auto;
     margin: -80px 50px 30px 30px;
 }
-
-span {
-    font-size: 20px;
+h3 {
     color: silver;
-    padding-left: 20px;
-
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: 100px 20px auto;
 }
+
+/* Stopwatch styling */
 .stopwatch-frame {
   display: flex;
   flex-direction: column;
@@ -45,6 +58,7 @@ span {
   width: 300px;
   box-shadow: 0 0 20px rgba(255, 140, 0, 0.3);
 }
+
 .dial {
   position: relative;
   width: 220px;
@@ -52,6 +66,7 @@ span {
   border-radius: 50%;
   background: radial-gradient(circle, #111 60%, #000);
 }
+
 .center-display {
   position: absolute;
   top: 50%;
@@ -60,15 +75,6 @@ span {
   color: white;
   font-family: 'Orbitron', sans-serif;
   font-size: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-#seconds, #miniSeconds {
-  min-width: 50px;
-  text-align: center;
 }
 
 .controls {
@@ -77,7 +83,8 @@ span {
   margin-top: 20px;
 }
 
-#startBtn1, #startBtn2, #startBtn3, #startBtn4, #startBtn5, #startBtn6, #startBtn7, #startBtn8, #startBtn9, #startBtn10, #resetBtn1, #resetBtn2, #resetBtn3, #resetBtn4, #resetBtn5, #resetBtn6, #resetBtn7, #resetBtn8, #resetBtn9, #resetBtn10 {
+/* Buttons now use classes */
+.startBtn, .resetBtn {
   width: 100px;
   padding: 10px;
   font-size: 18px;
@@ -87,34 +94,20 @@ span {
   transition: 0.3s;
 }
 
-#startBtn1, #startBtn2, #startBtn3, #startBtn4, #startBtn5, #startBtn6, #startBtn7, #startBtn8, #startBtn9, #startBtn10 {
+.startBtn {
   background-color: #00b86b;
   color: black;
 }
 
-#resetBtn1, #resetBtn2, #resetBtn3, #resetBtn4, #resetBtn5, #resetBtn6, #resetBtn7, #resetBtn8, #resetBtn9, #resetBtn10 {
+.resetBtn {
   background-color: #555;
   color: white;
 }
 
-#startBtn1:hover, #startBtn2:hover, #startBtn3:hover, #startBtn4:hover, #startBtn5:hover, #startBtn6:hover, #startBtn7:hover, #startBtn8:hover, #startBtn9:hover, #startBtn10:hover {
+.startBtn:hover {
   background-color: #00ff88;
-  cursor: pointer;
 }
 
-#resetBtn1:hover, #resetBtn2:hover, #resetBtn3:hover, #resetBtn4:hover, #resetBtn5:hover, #resetBtn6:hover, #resetBtn7:hover, #resetBtn8:hover, #resetBtn9:hover, #resetBtn10:hover {
+.resetBtn:hover {
   background-color: #777;
-  cursor: pointer;
-}
-ul{
-    color: silver;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-.inst{
-    color: #8f3027;
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
+}   

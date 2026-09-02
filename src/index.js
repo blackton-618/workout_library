@@ -63,17 +63,56 @@ function F2validation() {
 }
 
 function exerciseSelection() {
-    document.querySelectorAll('.box').forEach(box => {
+    const boxes = document.querySelectorAll('.box');
+    const nextBtn = document.querySelector('.nextbtn');
+    let userGoal = null;
+    boxes.forEach(box => {
         box.addEventListener('click', () => {
-            document.querySelectorAll('.box').forEach(b => b.classList.remove('selected'));
+            boxes.forEach(b => b.classList.remove('selected'));
             box.classList.add('selected');
+            userGoal = box.querySelector('img').alt;
+            localStorage.setItem("userGoal", userGoal);
+            console.log("Workout Goal:", userGoal);
         });
     });
-    console.log("Workout Goal:", userGoal);
 
-    localStorage.setItem("userGoal", userGoal);
+    nextBtn.addEventListener('click', () => {
+        if (userGoal=="Chest muscle") {
+            window.location.href = "F3.1.1.html"; 
+            return;
+        }
+        if (userGoal=="Lat muscle") {
+            window.location.href = "F3.1.2.html"; 
+            return;
+        }
+        if (userGoal=="Shoulder muscle") {
+            window.location.href = "F3.1.3.html"; 
+            return;
+        }
+        if (userGoal=="Triceps muscle") {
+            window.location.href = "F3.1.4.html"; 
+            return;
+        }
+        if (userGoal=="Biceps muscle") {
+            window.location.href = "F3.1.5.html"; 
+            return;
+        }
+        if (userGoal=="Back muscle") {
+            window.location.href = "F3.1.6.html"; 
+            return;
+        }
+        if (userGoal=="Leg muscle") {
+            window.location.href = "F3.1.7.html"; 
+            return;
+        }
+        if (userGoal=="Forearm muscle") {
+           window.location.href = "F3.1.8.html"; 
+            return;
+        }
+    });
 }
-    
+
+
 document.querySelectorAll('.stopwatch-frame').forEach(frame => {
   let secDisplay = frame.querySelector('.seconds');
   let miniDisplay = frame.querySelector('.miniSeconds');
@@ -121,9 +160,3 @@ document.querySelectorAll('.stopwatch-frame').forEach(frame => {
   startBtn.addEventListener("click", startStop);
   resetBtn.addEventListener("click", reset);
 });
-// Initialize all stopwatches
-for (let i = 1; i <= 10; i++) {
-  stopwatches[i] = createStopwatch(i);
-  stopwatches[i].startBtn.addEventListener("click", () => stopwatches[i].startStop());
-  stopwatches[i].resetBtn.addEventListener("click", () => stopwatches[i].reset());
-}
