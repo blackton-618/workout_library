@@ -1,19 +1,250 @@
-body{
-    background-color: black;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0b0b0b;
+  background-image: url('/assets/main\ frame\ bg.jpg');
+  color: #fff;
 }
-#video-container{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 52.6%;
-    height: 100vh;
+
+.vault-header {
+  background-color: #111;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
 }
-#userDetails{
-      position: fixed;
-      right: 0;
-      top: 0;
-      width: 47%;
-      height: 100vh;
-      padding: 90px 40px 45px 60px;
-      box-sizing: border-box;   
+
+#text.header {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.vault-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+#title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+#desc {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin: 10px 0 0;
+}  
+
+.vault-marquee {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-top: 1px solid #333;
+  border-top: 2px solid #00ff88;
+  border-bottom: 2px solid #00ff88;
+}
+
+.fixed-text {
+  color: ;
+  font-weight: 700;
+  padding: 4px 10px;
+  border: 2px solid #ffcc00;
+  border-radius: 6px;
+  margin-right: 12px;
+  white-space: nowrap;
+}
+
+.vault-marquee marquee {
+  color: white;
+  font-weight: 600;
+  flex: 1;
+}
+
+.vault-main {
+  width: 50%;              
+  height: 120px;           
+  margin: 0 auto;     
+  text-align: center;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+#signup-container {
+  margin-top: 40px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;              
+  justify-content: space-between;
+  align-items: stretch;
+  height: 700px;              
+  border: 2px solid #111;
+  box-sizing: border-box;
+  border-radius: 40px;
+}
+
+#video-container {
+  flex: 1.4;                   
+  height: 100%;
+}
+
+#video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.form-title {
+  font-size: 30px;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+#userDetails {
+  flex: 1;                    
+  height: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  color: white;
+  text-align: left;
+}
+
+#vaultFooter {
+  background-color: #0f0f0f;
+  color: #ccc;
+  font-family: 'Poppins', sans-serif;
+  padding: 30px 60px;
+  border-top: 2px solid #00ff88;
+  box-sizing: border-box;
+}
+
+/* Top section */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* ensures icons wrap on smaller screens */
+  margin-bottom: 25px;
+}
+
+.footer-left {
+  font-size: 14px;
+  color: #aaa;
+  max-width: 70%;
+  line-height: 1.5;
+}
+
+.footer-left code {
+  background-color: #1a1a1a;
+  color: #00ff88;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-icons .icon {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.footer-img {
+  width: 24px;
+  height: 24px;
+  filter: invert(80%);
+  transition: filter 0.3s ease;
+}
+
+.footer-img:hover {
+  filter: invert(60%) sepia(100%) saturate(300%) hue-rotate(90deg);
+}
+
+/* Disclaimer box */
+.footer-disclaimer {
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  border: 1px solid #ffcc00;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin: 25px 0;
+  color: #ddd;
+  line-height: 1.4;
+}
+
+.warning-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #ffcc00;
+}
+
+.disclaimer-text strong {
+  color: #ffcc00;
+}
+
+/* Bottom section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #888;
+  border-top: 1px solid #222;
+  padding-top: 15px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00ff88;
+}
+
+/* Dropdown menu (for multi-account icons) */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  color: #ccc;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #00ff88;
+  color: #111;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
