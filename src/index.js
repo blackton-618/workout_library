@@ -109,6 +109,14 @@ function exerciseSelection() {
            window.location.href = "F3.1.8.html"; 
             return;
         }
+        if (userGoal=="cardio exercises") {
+            window.location.href = "F3.2.1.html"; 
+            return;
+        }
+        if (userGoal=="Metabolic conditioning exercises") {
+            window.location.href = "F3.2.2.html"; 
+            return;
+        }
     });
 }
 
@@ -160,3 +168,18 @@ document.querySelectorAll('.stopwatch-frame').forEach(frame => {
   startBtn.addEventListener("click", startStop);
   resetBtn.addEventListener("click", reset);
 });
+
+function checkResolution() {
+  const width = window.innerWidth;
+  const notice = document.getElementById("errorNotice");
+  if (width < 1200) {
+    notice.style.display = "block";
+    document.body.style.overflow = "hidden";
+  } else {
+    notice.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+}
+
+window.onload = checkResolution;
+window.onresize = checkResolution;
