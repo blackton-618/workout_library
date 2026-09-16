@@ -66,59 +66,44 @@ function exerciseSelection() {
     const boxes = document.querySelectorAll('.box');
     const nextBtn = document.querySelector('.nextbtn');
     let userGoal = null;
+    const goalPages = {
+        "Chest muscle": "F3.1.1.html",
+        "Lat muscle": "F3.1.2.html",
+        "Shoulder muscle": "F3.1.3.html",
+        "Triceps muscle": "F3.1.4.html",
+        "Biceps muscle": "F3.1.5.html",
+        "Back muscle": "F3.1.6.html",
+        "Leg muscle": "F3.1.7.html",
+        "Forearm muscle": "F3.1.8.html",
+        "cardio exercises": "F3.2.1.html",
+        "Metabolic conditioning exercises": "F3.2.2.html"
+    };
+
     boxes.forEach(box => {
         box.addEventListener('click', () => {
             boxes.forEach(b => b.classList.remove('selected'));
             box.classList.add('selected');
-            userGoal = box.querySelector('img').alt;
-            localStorage.setItem("userGoal", userGoal);
-            console.log("Workout Goal:", userGoal);
+
+            const img = box.querySelector('img');
+            if (img) {
+                userGoal = img.alt.trim(); // use alt directly
+                localStorage.setItem("userGoal", userGoal);
+                console.log("Workout Goal:", userGoal);
+            }
         });
     });
 
-    nextBtn.addEventListener('click', () => {
-        if (userGoal=="Chest muscle") {
-            window.location.href = "F3.1.1.html"; 
-            return;
-        }
-        if (userGoal=="Lat muscle") {
-            window.location.href = "F3.1.2.html"; 
-            return;
-        }
-        if (userGoal=="Shoulder muscle") {
-            window.location.href = "F3.1.3.html"; 
-            return;
-        }
-        if (userGoal=="Triceps muscle") {
-            window.location.href = "F3.1.4.html"; 
-            return;
-        }
-        if (userGoal=="Biceps muscle") {
-            window.location.href = "F3.1.5.html"; 
-            return;
-        }
-        if (userGoal=="Back muscle") {
-            window.location.href = "F3.1.6.html"; 
-            return;
-        }
-        if (userGoal=="Leg muscle") {
-            window.location.href = "F3.1.7.html"; 
-            return;
-        }
-        if (userGoal=="Forearm muscle") {
-           window.location.href = "F3.1.8.html"; 
-            return;
-        }
-        if (userGoal=="cardio exercises") {
-            window.location.href = "F3.2.1.html"; 
-            return;
-        }
-        if (userGoal=="Metabolic conditioning exercises") {
-            window.location.href = "F3.2.2.html"; 
-            return;
-        }
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            if (userGoal && goalPages[userGoal]) {
+                window.location.href = goalPages[userGoal];
+            } else {
+                alert("Please select a workout goal first!");
+            }
+        });
+    }
 }
+
 
 
 document.querySelectorAll('.stopwatch-frame').forEach(frame => {
@@ -168,18 +153,3 @@ document.querySelectorAll('.stopwatch-frame').forEach(frame => {
   startBtn.addEventListener("click", startStop);
   resetBtn.addEventListener("click", reset);
 });
-
-function checkResolution() {
-  const width = window.innerWidth;
-  const notice = document.getElementById("errorNotice");
-  if (width < 1200) {
-    notice.style.display = "block";
-    document.body.style.overflow = "hidden";
-  } else {
-    notice.style.display = "none";
-    document.body.style.overflow = "auto";
-  }
-}
-
-window.onload = checkResolution;
-window.onresize = checkResolution;
