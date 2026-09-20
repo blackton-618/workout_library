@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background-color: #0b0b0b;
-  background-image: url('/assets/main\ frame\ bg.jpg');
+  background-image: url('assets\\main frame bg.jpg');
   color: #fff;
 }
 
@@ -121,12 +121,11 @@ body {
   box-sizing: border-box;
 }
 
-/* Top section */
 .footer-top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap; /* ensures icons wrap on smaller screens */
+  flex-wrap: wrap; 
   margin-bottom: 25px;
 }
 
@@ -166,7 +165,6 @@ body {
   filter: invert(60%) sepia(100%) saturate(300%) hue-rotate(90deg);
 }
 
-/* Disclaimer box */
 .footer-disclaimer {
   display: flex;
   align-items: center;
@@ -189,7 +187,6 @@ body {
   color: #ffcc00;
 }
 
-/* Bottom section */
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -216,7 +213,6 @@ body {
   color: #00ff88;
 }
 
-/* Dropdown menu (for multi-account icons) */
 .dropdown {
   position: relative;
   display: inline-block;

@@ -4,92 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout💪🏼Vault</title>
-    <link rel="icon" type="image/png" href="../lib/logo.png">
+    <link rel="icon" type="image/png" href="./lib/logo.png">
     <link rel="stylesheet" href="F1.css">
 </head>
 
 <body>
-  <header class="vault-header">
-      <img src="../lib/logo.png" alt="Workout Vault Icon" class="vault-icon">
-      <div id="text header">
-        <h3 id="title">WORKOUT💪VAULT</h3>
-        <p id="desc">Offline Fitness Knowledge Base & Rep Tracker</p>
-      </div>
-  </header>
-
-  <div class="vault-marquee">
-    <span class="fixed-text">DAILY FUEL</span> 
-    <marquee behavior="scroll" direction="left">•&nbsp;&nbsp;&nbsp;YOUR ONLY LIMIT IS YOU: Set your goals. Crush them.&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;NO PAIN, NO GAIN: Discipline today, success tomorrow.&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;FORM FIRST: Focus on progress, not perfection.</marquee>
+  <div id="errorNotice">
+    ⚠️ This application is designed for desktop screens.  
+    Please open it on a laptop or PC.
   </div>
+  
+  <div id="mainContent">
+    <header class="vault-header">
+        <img src="./lib/logo.png" alt="Workout Vault Icon" class="vault-icon">
+        <div id="text header">
+          <h3 id="title">WORKOUT💪VAULT</h3>
+          <p id="desc">Offline Fitness Knowledge Base & Rep Tracker</p>
+        </div>
+    </header>
 
-  <section class="vault-main">
-    <h1 style="font-weight: 30px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">MASTER YOUR CRAFT. <span style="color:#FFD580">ANYWHERE.</span><span style="color:#FDFD96"> NO SIGNAL NEEDED.</span></h1>
-    <p>
-      Your ultimate offline workout library, high-precision training timer, and rep companion.
-      Optimized exclusively for workstation & desktop environments (mobile access not supported).
-      Access comprehensive exercise archives, form guides, and tailored routines alongside an
-      integrated <strong>Speed & Efficiency Timer</strong> to track your sets, tempo, and rest intervals
-      offline with zero latency.
-    </p>
-  </section><br>
-
-  <div id="signup-container">
-    <div id="video-container">
-      <video autoplay loop muted src="../assets/F1slideShow.mp4" type="video/mp4"></video>
+    <div class="vault-marquee">
+      <span class="fixed-text">DAILY FUEL</span> 
+      <marquee behavior="scroll" direction="left">•&nbsp;&nbsp;&nbsp;YOUR ONLY LIMIT IS YOU: Set your goals. Crush them.&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;NO PAIN, NO GAIN: Discipline today, success tomorrow.&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;FORM FIRST: Focus on progress, not perfection.</marquee>
     </div>
 
-    <form id="userDetails">
-      <h2 class="form-title" style="font-family: 'Courier New', Courier, monospace;">PERSONALIZE YOUR VAULT !</h2><br><br>
-      <label for="usernameInput" style="font-size:25px; color:white">Name  :</label>
-      <label style="padding-left: 20px;">
-      <input id="usernameInput" style=" width:250px; font-size: 15px; color:white; background-color: #333; border: 1px solid #4CAF50; padding:5px;" type="text" placeholder="Full name"/>
-      </label>
-      <br><br><br><br>
+    <section class="vault-main">
+      <h1 style="font-weight: 30px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">MASTER YOUR CRAFT. <span style="color:#FFD580">ANYWHERE.</span><span style="color:#FDFD96"> NO SIGNAL NEEDED.</span></h1>
+      <p>
+        Your ultimate offline workout library, high-precision training timer, and rep companion.
+        Optimized exclusively for workstation & desktop environments (mobile access not supported).
+        Access comprehensive exercise archives, form guides, and tailored routines alongside an
+        integrated <strong>Speed & Efficiency Timer</strong> to track your sets, tempo, and rest intervals
+        offline with zero latency.
+      </p>
+    </section><br>
 
-      <label style="font-size:25px; color:white">Gender (optional) : </label>
-      <br><br><br><br>
-          <label style= "padding-left:40px; font-size:23px; color:white; accent-color:#4CAF50; cursor:pointer;">
-              <input id="maleGender" type="radio" name="gender" value="Male"> Male
-          </label>        
-          <label style= "padding-left:40px; font-size:23px; color:white;  accent-color:#4CAF50; cursor:pointer;">
-              <input id="femaleGender" type="radio" name="gender" value="Female"> Female
-          </label>
-      <br><br><br>
+    <div id="signup-container">
+      <div id="video-container">
+        <video autoplay loop muted src="./assets/F1slideShow.mp4" type="video/mp4"></video>
+      </div>
+
+      <form id="userDetails">
+        <h2 class="form-title" style="font-family: 'Courier New', Courier, monospace;">PERSONALIZE YOUR VAULT !</h2><br><br>
+        <label for="usernameInput" style="font-size:25px; color:white">Name  :</label>
+        <label style="padding-left: 20px;">
+          <input id="usernameInput" style=" width:250px; font-size: 15px; color:white; background-color: #333; border: 1px solid #4CAF50; padding:5px;" type="text" placeholder="Full name"/>
+        </label>
+        <br><br><br><br>
+
+          <label style="font-size:25px; color:white">Gender (optional) : </label>
+          <br><br><br><br>
+              <label style= "padding-left:40px; font-size:23px; color:white; accent-color:#4CAF50; cursor:pointer;">
+                  <input id="maleGender" type="radio" name="gender" value="Male"> Male
+              </label>        
+              <label style= "padding-left:40px; font-size:23px; color:white;  accent-color:#4CAF50; cursor:pointer;">
+                  <input id="femaleGender" type="radio" name="gender" value="Female"> Female
+              </label>
+          <br><br><br>
 
 
-      <label style="font-size:25px; color:white">What is your experience ? </label>
-      <br><br><br><br>
-          <label style="padding-left: 20px;">
-              <select id="experienceSelect" style="width:300px; font-size:20px; color:white; background-color: #333; border: 1px solid #4CAF50; padding: 5px; cursor: pointer;">
-                  <option value="" disabled selected>Select</option>  
-                  <option value="Beginner">Beginner</option>
-                  <option value="Intermediate">Intermediate</option>
-                  <option value="Advanced">Advanced</option>
-              </select>
-          </label>
-      <br><br><br><br><br><br>
+          <label style="font-size:25px; color:white">What is your experience ? </label>
+          <br><br><br><br>
+              <label style="padding-left: 20px;">
+                  <select id="experienceSelect" style="width:300px; font-size:20px; color:white; background-color: #333; border: 1px solid #4CAF50; padding: 5px; cursor: pointer;">
+                      <option value="" disabled selected>Select</option>  
+                      <option value="Beginner">Beginner</option>
+                      <option value="Intermediate">Intermediate</option>
+                      <option value="Advanced">Advanced</option>
+                  </select>
+              </label>
+          <br><br><br><br><br><br>
 
 
-      <label style="padding-left: 180px;">
-          <button type="button" onclick="return mainvalidation()" style="background-color: #4CAF50; color: white; width: 100px; padding:10px; border-radius: 4px; cursor: pointer;">NEXT >></button>
-      </label>    
-    </form>
-  </div><br>
+          <label style="padding-left: 180px;">
+              <button type="button" onclick="return mainvalidation()" style="background-color: #4CAF50; color: white; width: 100px; padding:10px; border-radius: 4px; cursor: pointer;">NEXT >></button>
+          </label>    
+        </form>
+      </div><br>
 
-<footer id="vaultFooter">
-  <div class="footer-top">
-    <div class="footer-left">
-      <span class="crafted">Crafted by <code>`pro_cs!`</code></span>
-      <span class="developed">• Developed by <strong>Santhosh S & Hemanth K</strong> • Engineering high-performance web applications</span>
-    </div>
-
-    <div class="footer-icons">
-      <a href="mailto:santhosh12shankar@gmail.com,hemanthind.11@gmail.com" class="icon">
-        <img style="height: 26px;" src="../lib/gmail.png" alt="Mail Icon" class="footer-img">
+    <footer id="vaultFooter">
+      <div class="footer-top">
+        <div class="footer-left">
+          <span class="crafted">Crafted by <code>`pro_cs!`</code></span>
+          <span class="developed">• Developed by <strong>Santhosh S & Hemanth K</strong> • Engineering high-performance web applications</span>
+        </div>
+      
+        <div class="footer-icons">
+          <a href="mailto:santhosh12shankar@gmail.com,hemanthind.11@gmail.com" class="icon">
+        <img style="height: 26px;" src=" ./lib/gmail.png" alt="Mail Icon" class="footer-img">
       </a>
       <div class="dropdown">
         <span class="icon">  
-          <img src="../lib/linkedin.png" alt="LinkedIn Icon" class="footer-img">
+          <img src="./lib/linkedin.png" alt="LinkedIn Icon" class="footer-img">
         </span>
         <div class="dropdown-content">
           <a href="https://www.linkedin.com/in/santhosh-shankar-743636389" target="_blank">Santhosh S</a>
@@ -99,7 +105,7 @@
 
     <div class="dropdown">
       <span class="icon">
-        <img src="../lib/github.png" alt="GitHub Icon" class="footer-img">
+        <img src="./lib/github.png" alt="GitHub Icon" class="footer-img">
       </span>
       <div class="dropdown-content">
         <a href="https://github.com/blackton-618" target="_blank">Santhosh S</a>
@@ -107,28 +113,22 @@
       </div>
     </div>
 
-  </div>
+      </div>
 
-  <div class="footer-disclaimer">
-    <span class="warning-icon">⚠️</span>
-    <span class="disclaimer-text">
-      <strong>SAFETY DISCLAIMER:</strong> Always consult a physician or certified fitness professional before starting any new exercise routine. Perform workouts under proper supervision to prevent injury.
-    </span>
-  </div>
+      <div class="footer-disclaimer">
+        <span class="warning-icon">⚠️</span>
+        <span class="disclaimer-text">
+          <strong>SAFETY DISCLAIMER:</strong> Always consult a physician or certified fitness professional before starting any new exercise routine. Perform workouts under proper supervision to prevent injury.
+        </span>
+      </div>
 
-  <div class="footer-bottom">
-    <p class="copyright">
-      © 2026 <strong>Workout💪Vault</strong>. All rights reserved. Built for champions who train without limits.
-    </p>
-  </div>
-</footer>
-
-  <div id="errorNotice">
-    ⚠️ This application is designed for desktop screens.  
-    Please open it on a laptop or PC.
-  </div>
-    
-    <script src="index.js"></script>
-
+      <div class="footer-bottom">
+        <p class="copyright">
+          © 2026 <strong>Workout💪Vault</strong>. All rights reserved. Built for champions who train without limits.
+        </p>
+      </div>
+    </footer>
+  </div>    
+  <script src="index.js"></script>
 </body>
 </html>

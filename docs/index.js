@@ -153,3 +153,26 @@ document.querySelectorAll('.stopwatch-frame').forEach(frame => {
   startBtn.addEventListener("click", startStop);
   resetBtn.addEventListener("click", reset);
 });
+
+function checkResolution() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const notice = document.getElementById("errorNotice");
+  const content = document.getElementById("mainContent");
+
+  const minWidth = 1024;   
+  const minHeight = 600;   
+
+  if (width < minWidth || height < minHeight) {
+    notice.style.display = "block";
+    content.style.display = "none";
+  } else {
+    notice.style.display = "none";
+    content.style.display = "block";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  checkResolution();
+  window.onresize = checkResolution;
+});

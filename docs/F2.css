@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url("../assets/F2bg.jpeg");
+    background-image: url("assets/F2bg.jpeg");
     background-size: cover;
     background-position: center; 
     height: 100vh;
@@ -38,7 +38,7 @@ body{
 .one{
     width: 200px;
     border-radius: 5px;
-    background-image: url("../assets/silver background.jpeg");
+    background-image: url("assets/silver background.jpeg");
     background-size: cover;      
     background-position: center;
     background-repeat: no-repeat;
@@ -48,7 +48,7 @@ body{
 
 .two{
     width: 200px;
-    background-image: url("../assets/silver background.jpeg");
+    background-image: url("assets/silver background.jpeg");
     background-size: cover;      
     background-position: center;
     background-repeat: no-repeat;
@@ -58,7 +58,7 @@ body{
 
 .three{
     width: 200px;
-    background-image: url("../assets/silver background.jpeg");
+    background-image: url("assets/silver background.jpeg");
     background-size: cover;      
     background-position: center;
     background-repeat: no-repeat;
@@ -68,7 +68,7 @@ body{
 
 .four{
     width: 200px;
-    background-image: url("../assets/silver background.jpeg");
+    background-image: url("assets/silver background.jpeg");
     background-size: cover;      
     background-position: center;
     background-repeat: no-repeat;
@@ -79,7 +79,7 @@ body{
 
 .five{
     margin-top: 80px;
-    background-image: url("../assets/silver background.jpeg");
+    background-image: url("assets/silver background.jpeg");
     background-size: cover;      
     background-position: center;
     background-repeat: no-repeat;
