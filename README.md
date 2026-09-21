@@ -37,16 +37,16 @@ The app provides a user‑friendly interface to browse 100+ exercises with detai
 ## Screenshots :
 
 ### Home Page
-![Home Page](lib/main%20frame%20ss.jpg)
+![Home Page](/docs/lib/main%20frame%20ss.jpg)
 
 ### Catagory selection
-![Catagory selection](lib/frame2%20ss.jpg)
+![Catagory selection](/docs/lib/frame2%20ss.jpg)
 
 ### Multiple muscle target
-![Multiple muscle target](lib/frame3%20ss.jpg)
+![Multiple muscle target](/docs/lib/frame3%20ss.jpg)
 
 ### Exercise library with stopwatch
-![Exercise library with stopwatch](lib/indes%20frame%20ss.jpg)
+![Exercise library with stopwatch](/docs/lib/indes%20frame%20ss.jpg)
 
 ## License :
 This project is licensed under the **Apache License 2.0**.  
